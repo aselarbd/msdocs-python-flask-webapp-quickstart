@@ -9,8 +9,8 @@ def index():
    return render_template('index.html')
 
 @app.route('/test')
-def index():
-   print('Request for index page received')
+def test():
+   print('Request for test page received')
    return {"message":"hello world", "code":200}, 200
 
 @app.route('/favicon.ico')
