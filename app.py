@@ -13,7 +13,7 @@ def index():
 def test():
    db = os.environ.get('database')
    print('Request for test page received')
-   return {"message":"hello world", "code":200, "datbase":db}, 200
+   return {"message":"hello world", "code":200, "datbase":db, "branch":"staging"}, 200
 
 @app.route('/favicon.ico')
 def favicon():
