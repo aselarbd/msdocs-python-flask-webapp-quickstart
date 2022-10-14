@@ -8,6 +8,11 @@ def index():
    print('Request for index page received')
    return render_template('index.html')
 
+@app.route('/test')
+def index():
+   print('Request for index page received')
+   return {"message":"hello world", "code":200}, 200
+
 @app.route('/favicon.ico')
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'),
