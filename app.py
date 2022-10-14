@@ -1,4 +1,5 @@
 from datetime import datetime
+import os
 from flask import Flask, render_template, request, redirect, url_for, send_from_directory
 app = Flask(__name__)
 
@@ -10,8 +11,9 @@ def index():
 
 @app.route('/test')
 def test():
+   db = os.environ.get('database')
    print('Request for test page received')
-   return {"message":"hello world", "code":200}, 200
+   return {"message":"hello world", "code":200, "datbase":db}, 200
 
 @app.route('/favicon.ico')
 def favicon():
